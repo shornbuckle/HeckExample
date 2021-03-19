@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 #this is a test
 
 #seanTest branch comment
+#pull request
 
 from pathlib import Path
 
