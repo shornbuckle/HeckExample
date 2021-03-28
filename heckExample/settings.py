@@ -16,9 +16,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 #pull request
 
 from pathlib import Path
+import django_heroku
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
 # Quick-start development settings - unsuitable for production
@@ -36,6 +39,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    "import_export",
+
 ]
 
 MIDDLEWARE = [
@@ -72,6 +79,8 @@ TEMPLATES = [
         },
     },
 ]
+
+#AUTH_USER_MODEL = "accounts.User"
 
 WSGI_APPLICATION = 'heckExample.wsgi.application'
 
