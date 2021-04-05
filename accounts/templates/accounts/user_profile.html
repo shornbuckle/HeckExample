@@ -1,3 +1,6 @@
+{% extends 'accounts/base.html' %}
+
+{% block body %}
 
 <h1 class="mb-0 bread">{{user1.username}} Details</h1>
 
@@ -9,3 +12,5 @@
    <h3>User State: </h3><p>{{user1.state}}</p>
    <h3>Contact email: </h3><p>{{user1.email}}</p>
  </div>
+
+{% endblock %}
