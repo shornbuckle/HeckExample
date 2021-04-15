@@ -40,7 +40,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
-    'accounts',
     'groceries',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "accounts.apps.AccountsConfig",
     'crispy_forms',
     "import_export",
 
@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-#AUTH_USER_MODEL = "accounts.User"
+AUTH_USER_MODEL = "accounts.User"
 
 WSGI_APPLICATION = 'heckExample.wsgi.application'
 
@@ -134,3 +134,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#redirect upon login
+LOGIN_REDIRECT_URL = "../../"

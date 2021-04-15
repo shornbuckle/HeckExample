@@ -1,0 +1,53 @@
+
+
+
+</head>
+<body1>
+    <header>
+<a href="{% url 'accounts:accounts-home' %}">
+            <h1 class="logo-text"><span>Test </span>Base Page</h1>
+    </a>
+        </div>
+
+
+            <ul>
+                <li><a href="/login" class="login">Login</a></li>
+                <li><a href="/register" class="register">Register</a></li>
+                <li><a href="/logout" class="logout">Logout</a></li>
+
+            </ul>
+
+        <ul class="nav">
+            {% if user.is_authenticated %}
+
+                {% if user.is_clientuser %}
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            {{ user.username }}
+                            <i class="fas fa-chevron-down" style="font-size: .8em;"></i>
+                        </a>
+                        <ul>
+                            <li><a href="/user/profile">Edit My Profile</a></li>
+                            <li><a href="/profile/{{user.username}}">Preview Profile</a></li>
+                            <li><a href="/logout" class="logout">Logout</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+            {% else %}
+
+                <a href="/login">
+                           <i class="fas fa-user"></i>
+                </a>
+
+            </li>
+                </ul>
+            </li>
+            {% endif %}
+        </ul>
+    </header>
+</body1>
+
+{% block body %}
+{% endblock %}
