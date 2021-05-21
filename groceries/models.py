@@ -7,7 +7,7 @@ from django.conf import settings
 
 
 class Vegetable(models.Model):
-    UserOwner = models.ForeignKey(User, null=True, on_delete=models.CASCADE, related_name="vegetable")
+    #UserOwner = models.ForeignKey(User, null=True, on_delete=models.CASCADE, related_name="vegetable")
     vegetable_name = models.CharField(max_length=80)
 
     def __str__(self):
