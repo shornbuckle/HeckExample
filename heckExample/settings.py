@@ -40,7 +40,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
-    'groceries',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "accounts.apps.AccountsConfig",
+    "groceries.apps.GroceriesConfig",
     'crispy_forms',
     "import_export",
 

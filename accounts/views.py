@@ -82,3 +82,5 @@ def clientuserProfileUpdate(request):
 
     return render(request, "accounts/userUpdate.html", context)
 
+
+

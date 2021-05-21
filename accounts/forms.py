@@ -2,7 +2,6 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from .models import UserRegisterData, User
 
-
 class ClientUserRegistrationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -63,7 +62,6 @@ class ClientUserUpdateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["about"].label = "Your Bio"
-        self.fields["username"].label = "Username"
         self.fields["first_name"].label = "First Name"
         self.fields["last_name"].label = "Last Name"
 
@@ -87,7 +85,6 @@ class ClientUserUpdateForm(forms.ModelForm):
         model = User
         fields = [
             "about",
-            "username",
             "first_name",
             "last_name",
             "address",

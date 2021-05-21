@@ -13,6 +13,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include("accounts.urls")), #we want to be able to point to urls.py in our sub files
+    path("", include("groceries.urls")),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('groceries/', include('django.contrib.auth.urls')),
 ]
